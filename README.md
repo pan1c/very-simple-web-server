@@ -3,8 +3,8 @@
 Synopsis
 ----------
 
-This terraform code will deploy google cloud storage bucket, and configure it to act as web server for index.html  
-It can be deployied only in google cloud  
+This terraform code will deploy google cloud storage bucket, and configure it to act as a web server for index.html  
+It can be deployed only in google cloud  
 
 Prerequisites
 ----------
@@ -16,8 +16,8 @@ Prerequisites
 Installing
 ----------
 
- - Adjust variables.tf
- - Adjust backend.tf
+ - Adjust variables.tf with your "statefiles bucket" name
+ - Adjust backend.tf with your "website bucket" name
  - Run terraform commands
 ```
 terrafrom init
@@ -36,6 +36,6 @@ terrafrom apply
 
 Check the result
 ----------
-Check https://storage.googleapis.com/<bucket name>/index.html  
+Check https://storage.googleapis.com/ {{bucket name}} /index.html  
 e.g https://storage.googleapis.com/very_test_bucket/index.html
 
